@@ -6,7 +6,12 @@ export default {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            padding: {
+                container: "4rem", // This is an example, set your desired padding value
+            },
+        },
     },
-    plugins: [],
+    darkMode: "class",
+    plugins: [require("tw-elements/plugin.cjs")],
 };

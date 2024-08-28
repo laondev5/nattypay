@@ -112,10 +112,34 @@
 </nav>
     </header> --}}
 
-    <nav class="bg-white shadow-md p-4">
-        <div class="container mx-auto flex justify-between items-center">
+    <nav class="bg-white shadow-md p-4 hidden lg:block">
+        <div class="container mx-auto flex justify-between items-center w-full">
+
+            {{-- handbuger --}}
+            <button
+      class="block border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 md:hidden"
+      type="button"
+      data-twe-collapse-init
+      data-twe-target="#navbarSupportedContent1"
+      aria-controls="navbarSupportedContent1"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <!-- Hamburger icon -->
+      <span
+        class="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor">
+          <path
+            fill-rule="evenodd"
+            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+            clip-rule="evenodd" />
+        </svg>
+      </span>
+    </button>
             <!-- Logo -->
-            <div class="flex items-center">
+            <div class="">
                  <img src="{{ asset('image/logo.png') }}" alt="Logo" class="w-[4rem] h-[4rem]" loading="lazy"><!-- Replace with actual path to logo image -->
                
             </div>
@@ -140,6 +164,62 @@
 </button>
         </div>
     </nav>
+
+    {{-- mobile navbar --}}
+<nav class="w-full bg-white shadow-md block lg:hidden px-[2rem]">
+  <div class="flex justify-between items-center">
+     {{-- handbuger --}}
+     <div class="flex gap-4 items-center">
+               <button
+      class="block border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+      type="button"
+      data-twe-collapse-init
+      data-twe-target="#navbarSupportedContent1"
+      aria-controls="navbarSupportedContent1"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <!-- Hamburger icon -->
+      <span
+        class="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor">
+          <path
+            fill-rule="evenodd"
+            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+            clip-rule="evenodd" />
+        </svg>
+      </span>
+    </button>
+            <!-- Logo -->
+            <div class="">
+                 <img src="{{ asset('image/logo.png') }}" alt="Logo" class="w-[4rem] h-[4rem]" loading="lazy"><!-- Replace with actual path to logo image -->
+               
+            </div>
+            <!-- Navigation Links -->
+            <div class="hidden md:flex lg:hidden space-x-8">
+                <a href="#" class="text-gray-600 hover:text-yellow-500">Home</a>
+                <a href="#" class="text-yellow-500 border-b-2 border-yellow-500">About</a> <!-- Active Link Style -->
+                <a href="#" class="text-gray-600 hover:text-yellow-500">FAQs</a>
+                <a href="#" class="text-gray-600 hover:text-yellow-500">Contact Us</a>
+            </div>
+     </div>
+            <!-- Download Button -->
+            {{-- <button class="flex items-center px-6 py-2 border rounded text-yellow-500 border-yellow-500 hover:bg-yellow-500 hover:text-white transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a1 1 0 01-1-1V5.414L5.707 9.707a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 01-1 1z" clip-rule="evenodd" />
+                </svg>
+                Download App
+            </button> --}}
+            <button
+  type="button"
+  class="inline-block rounded-full bg-warning px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-warning-3 transition duration-150 ease-in-out hover:bg-warning-accent-300 hover:shadow-warning-2 focus:bg-warning-accent-300 focus:shadow-warning-2 focus:outline-none focus:ring-0 active:bg-warning-600 active:shadow-warning-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong">
+  Download App
+</button>
+  </div>
+</nav>
+    {{-- end of mobile navbar --}}
 <div class="w-full">
  @yield('content')
 </div>

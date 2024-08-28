@@ -2,11 +2,11 @@
 
 @section('content')
  <!-- Hero Section -->
-    <section class=" py-12 container mx-auto">
+    <section class=" w-full py-12 container mx-auto">
         <div class="flex flex-col lg:flex-row items-center">
-            <div class=" flex-1 w-[80%] ">
-                <h1 class="text-7xl font-extrabold mb-4">Get In Touch</h1>
-                <p class="text-gray-600 mb-8 w-[80%]">For any inquiries or assistance, do not hesitate to reach out to us at Natty. Your satisfaction is our priority.</p>
+            <div class="flex flex-col lg:flex-1 w-[100%] text-center lg:text-start lg:w-[80%] ">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4  w-[100%]">Get In Touch</h1>
+                <p class="text-gray-600 mb-8 w-[100%] lg:w-[80%]">For any inquiries or assistance, do not hesitate to reach out to us at Natty. Your satisfaction is our priority.</p>
                 <div class="">
                     <h2 class="text-3xl font-bold my-2">Social Handles</h2>
                     <div class="grid grid-cols-4 gap-3 w-[60%] justify-center text-[2rem] items-center">
